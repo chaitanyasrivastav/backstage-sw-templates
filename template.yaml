@@ -2,7 +2,7 @@ apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 # some metadata about the template itself
 metadata:
-  name: backstage/sample-demo
+  name: sample-demo
   title: Test Action template
   description: scaffolder template demo
 spec:

@@ -7,7 +7,7 @@ metadata:
   description: scaffolder template demo
 spec:
   owner: test@test.com
-  type: service
+  type: website
 
   # these are the steps which are rendered in the frontend with the form input
   parameters:

@@ -39,9 +39,10 @@ spec:
           title: Parameters defining the Object
           type: object
           properties:
-            title: Storage in GB
-            type: number
-            ui:autofocus: true
+            storageGB:
+              title: Storage in GB
+              type: number
+              ui:autofocus: true
 
   # here's the steps that are executed in series in the scaffolder backend
   steps:

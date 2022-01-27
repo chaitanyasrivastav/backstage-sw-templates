@@ -1,0 +1,48 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+# some metadata about the template itself
+metadata:
+  name: sample-demo
+  title: Test Action template
+  description: scaffolder template demo
+spec:
+  owner: backstage/techdocs-core
+  type: service
+
+  # these are the steps which are rendered in the frontend with the form input
+  parameters:
+    - title: Object Metadata
+      required:
+        - name
+        - owner
+      properties:
+        name:
+          title: Name
+          type: string
+          description: Unique name of the Object
+          ui:autofocus: true
+          ui:options:
+            rows: 5
+        owner:
+          title: Owner
+          type: string
+          description: Owner of the Object
+          ui:field: OwnerPicker
+          ui:options:
+            allowedKinds:
+              - Group
+    - title: Obect Specification
+      required:
+        - repoUrl
+      properties:
+        parameters:
+          title: Parameters defining the Object
+          type: object
+          properties:
+            title: Storage in GB
+            type: number
+            ui:autofocus: true
+            ui:options:
+              rows: 5
+
+  # here's the steps that are executed in series in the scaffolder backend

@@ -42,8 +42,6 @@ spec:
             title: Storage in GB
             type: number
             ui:autofocus: true
-            ui:options:
-              rows: 5
 
   # here's the steps that are executed in series in the scaffolder backend
   steps:

@@ -38,6 +38,8 @@ spec:
         storageGB:
           title: Storage in GB
           type: number
+          minimum: 20
+          default: 20
           ui:autofocus: true
           ui:options:
             rows: 5

@@ -51,6 +51,7 @@ spec:
       action: mycompany:create-rds
       input:
         storageGB: ${{ parameters.storageGB }}
+    
     - id: register
       name: Register
       action: catalog:register

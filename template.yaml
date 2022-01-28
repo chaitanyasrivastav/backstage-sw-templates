@@ -5,6 +5,9 @@ metadata:
   name: sample-demo
   title: Test Action template
   description: scaffolder template demo
+  tags:
+    - demo
+    - backstage
 spec:
   owner: test@test.com
   type: service

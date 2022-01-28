@@ -51,13 +51,6 @@ spec:
       action: mycompany:create-rds
       input:
         storageGB: ${{ parameters.storageGB }}
-    
-    - id: register
-      name: Register
-      action: catalog:register
-      input:
-        repoContentsUrl: 'https://github.com/chaitanyasrivastav/backstage-sw-templates'
-        catalogInfoPath: '/catalog-info.yaml'
         
   # some outputs which are saved along with the job for use in the frontend
   output:

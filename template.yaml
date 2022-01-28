@@ -50,7 +50,7 @@ spec:
       name: create RDS
       action: mycompany:create-rds
       input:
-        storageGB: 20
+        storageGB: ${{ parameters.storageGB }}
         
   # some outputs which are saved along with the job for use in the frontend
   output:

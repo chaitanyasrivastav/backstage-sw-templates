@@ -46,6 +46,8 @@ spec:
 
   # here's the steps that are executed in series in the scaffolder backend
   steps:
-    - id: register
-      name: register
-      action: catalog:register
+    - id: create-rds
+      name: create-rds
+      action: mycompany:create-rds
+      input:
+        storageGB: 20

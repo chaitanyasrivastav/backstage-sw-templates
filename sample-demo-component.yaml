@@ -6,4 +6,4 @@ metadata:
 spec:
   type: template
   lifecycle: production
-  owner: test@test.com
+  owner: team-demo

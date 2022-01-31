@@ -7,4 +7,5 @@ spec:
   targets:
     - ./template.yaml
     - ./team-demo-group.yaml
+    - ./team-demo2-group.yaml
     - ./sample-demo-component.yaml

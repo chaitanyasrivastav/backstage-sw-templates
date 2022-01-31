@@ -14,7 +14,7 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
-  name: example.name1
+  name: example.name3
 spec:
   profile:
     displayName: Name1 Example

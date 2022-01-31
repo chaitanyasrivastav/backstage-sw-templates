@@ -1,1 +1,9 @@
-
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: sample-component
+  description: adding sample-demo template to catalog
+spec:
+  type: template
+  lifecycle: production
+  owner: test@test.com

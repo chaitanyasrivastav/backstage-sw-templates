@@ -1,1 +1,60 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+# some metadata about the template itself
+metadata:
+  name: sample-demo
+  title: Test Action template
+  description: scaffolder template demo
+  tags:
+    - demo
+    - backstage
+spec:
+  owner: test@test.com
+  type: service
 
+  # these are the steps which are rendered in the frontend with the form input
+  parameters:
+    - title: Object Metadata
+      required:
+        - name
+        - owner
+      properties:
+        name:
+          title: Name
+          type: string
+          description: Unique name of the Object
+          ui:autofocus: true
+          ui:options:
+            rows: 5
+        owner:
+          title: Owner
+          type: string
+          description: Owner of the Object
+          ui:field: OwnerPicker
+          ui:options:
+            allowedKinds:
+              - Group
+    - title: Obect Inputs
+      required:
+        -  storageGB
+      properties:
+        storageGB:
+          title: Storage in GB
+          type: number
+          minimum: 20
+          default: 20
+          ui:autofocus: true
+          ui:options:
+            rows: 5
+
+  # here's the steps that are executed in series in the scaffolder backend
+  steps:
+    - id: createrds
+      name: create RDS
+      action: mycompany:create-rds
+      input:
+        storageGB: ${{ parameters.storageGB }}
+        
+  # some outputs which are saved along with the job for use in the frontend
+  output:
+    rdsStorage: ${{ steps.createrds.output.rdsStorage }}

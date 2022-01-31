@@ -4,6 +4,6 @@ metadata:
   name: sample-component
   description: adding sample-demo template to catalog
 spec:
-  type: template
+  type: service
   lifecycle: production
   owner: team-demo

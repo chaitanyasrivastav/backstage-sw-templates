@@ -9,7 +9,7 @@ metadata:
     - demo
     - backstage
 spec:
-  owner: test@test.com
+  owner: team-demo
   type: service
 
   # these are the steps which are rendered in the frontend with the form input

@@ -49,12 +49,12 @@ spec:
 
   # here's the steps that are executed in series in the scaffolder backend
   steps:
-    - id: createrds
-      name: create RDS
-      action: mycompany:create-rds
+    - id: custom
+      name: Custom Action
+      action: mycompany:custom
       input:
         storageGB: ${{ parameters.storageGB }}
         
   # some outputs which are saved along with the job for use in the frontend
   output:
-    rdsStorage: ${{ steps.createrds.output.rdsStorage }}
+    rdsStorage: ${{ steps.createrds.output.storageCapacity }}
